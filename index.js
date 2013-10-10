@@ -44,7 +44,6 @@ Emitter(Overlay.prototype);
  */
 
 Overlay.prototype.show = function(){
-  if (this.el) return;
   document.getElementsByTagName('body')[0].appendChild(this.el);
   this.emit('show');
   redraw(this.el);
