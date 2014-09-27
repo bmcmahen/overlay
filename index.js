@@ -23,7 +23,10 @@ module.exports = Overlay;
 function Overlay(className) {
   if (!(this instanceof Overlay)) return new Overlay();
   this.el = document.createElement('div');
-  this.el.className = 'Overlay ' + className;
+  this.el.className = 'Overlay';
+  if (className) {
+    this.el.classList.add(className);
+  }
 }
 
 /**

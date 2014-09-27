@@ -5,6 +5,9 @@ scripts:
 styles:
 	@duo index.css > dist/overlay.css
 
+dev:
+	@duo index.js > dist/overlay.js -w
+
 clean:
 	rm -fr dist components
 
