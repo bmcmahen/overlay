@@ -1,11 +1,26 @@
 # Overlay
 
-  Super simple overlay.
+  Super simple overlay. Ensure that you have a `classList` polyfill for older browsers.
 
 ## Installation
 
+  Install using [Duo](http://github.com/duojs/duo).
+
+```javascript
+var Overlay = require('bmcmahen/overlay');
 ```
-$ component install bmcmahen/overlay
+
+## Example
+```
+var Overlay = require('overlay');
+var overlay = Overlay('customClassName').show();
+setTimeout(function(){
+  overlay.hide();
+}, 5000);
+
+overlay.on('hidden', function(){
+  // overlay is fully hidden
+});
 ```
 
 ## API
@@ -29,19 +44,6 @@ $ component install bmcmahen/overlay
   - 'shown' when the overlay is shown
   - `hide` when the overlay is hiding
   - `hidden` when the overlay is hidden (removed)
-
-## Example
-```
-var Overlay = require('overlay');
-var overlay = Overlay.show();
-setTimeout(function(){
-  overlay.hide();
-}, 5000);
-
-overlay.on('hidden', function(){
-  // overlay is fully hidden
-});
-```
 
 ## License
 

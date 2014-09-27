@@ -1,4 +1,4 @@
-#overlay {
+.Overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -14,6 +14,6 @@
   opacity: 0;
 }
 
-#overlay.show {
+.Overlay.show {
   opacity: 1;
 }

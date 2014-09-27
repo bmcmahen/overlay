@@ -1,14 +1,11 @@
 
-build: overlay.css index.js template.js components
-	@component build
+scripts:
+	@duo index.js > dist/overlay.js -g Overlay
 
-template.js: template.html
-	@component convert $<
-
-components:
-	@component install
+styles:
+	@duo index.css > dist/overlay.css
 
 clean:
-	rm -fr build components
+	rm -fr dist components
 
 .PHONY: clean
